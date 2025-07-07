@@ -12,7 +12,7 @@ abstract interface class DataSource<T> {
 class RemoteDataSource extends DataSource {
   @override
   Future<List<Song>?> loadData() async {
-    const url = 'https://thantrieu.com/resources/braniumapis/songs.json';
+    const url = 'https://thantrieu.com/resources/braniumapis/songs.jsons';
     final uri = Uri.parse(url);
     final response = await http.get(uri);
     if (response.statusCode == 200) {
